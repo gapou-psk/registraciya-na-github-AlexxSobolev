@@ -1,0 +1,44 @@
+1.1 Отношение (таблица)
+-----------------------
+(5 Шаг)
+Фамилия И.О - Атрибут
+4 - Размерность
+{###-##-##}, где # - цифра от 0 до 9 - Домен
+002, Иванов И.И., 234-12-01, инженер - Кортеж
+Сотрудник - Отношение
+3 - Мощность
+---------------------------------------------
+(6 Шаг)
+store
+price_rub
+name_book
+---------
+(7 Шаг)
+5.12 -0.99 10.12 - DECIMAL(5,2)
+Слово Предложение Абзац - VARCHAR(11)
+sql mySql - VARCHAR(5)
+56.1 456.1 3000 - DECIMAL(7,1)
+-34078 55 0 - INT
+-------------------------------------
+(8 Шаг)
+CREATE TABLE book(
+    book_id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(50),
+    author VARCHAR(30),
+    price DECIMAL(8, 2),
+    amount INT
+);
+-------------------------------------------
+(9 Шаг)
+INSERT INTO book (book_id, title, author, price, amount) 
+VALUES (1,'Мастер и Маргарита','Булгаков М.А.',670.99,3)
+--------------------------------------------------------
+(10 Шаг)
+INSERT INTO book (book_id, title, author, price, amount)
+VALUES (2, 'Белая гвардия', 'Булгаков М.А.', 540.50, 5);
+INSERT INTO book (book_id, title, author, price, amount)
+VALUES (3, 'Идиот', 'Достоевский Ф.М.', 460.00, 10);
+INSERT INTO book (book_id, title, author, price, amount)
+VALUES (4, 'Братья Карамазовы', 'Достоевский Ф.М.', 799.01, 2);
+SELECT * FROM book;
+---------------------------------------------------------------
